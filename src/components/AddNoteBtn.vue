@@ -1,0 +1,1 @@
+//Main component for adding a note
