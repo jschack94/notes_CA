@@ -35,3 +35,41 @@ body{
     display: inline-block;
     border: 1px solid var(--primary-color);
 }
+.btn:hover{
+    cursor: pointer;
+    filter: brightness(95%);
+}
+.btn.block{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.2em;
+    border-radius: 5px;
+}
+.btn.link{
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.mb-2{
+    margin-bottom: 2em;
+}
+
+.input-group{
+    label{
+        display: block;
+        margin-bottom: .5em;
+    }
+    input, textarea{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5em 1em;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 1em;
+    }
+    textarea{
+        min-height: 100px;
+    }
+}
