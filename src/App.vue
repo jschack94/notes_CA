@@ -9,6 +9,7 @@
        :key="index"
        :note="note"
        :id="index"
+       @delete="deleteNote(index)"
       />
     </div>
     <div class="no-notes" v-else>
@@ -45,8 +46,17 @@ export default {
   methods: {
     saveNote(note) {
       this.notes.push(note)
+    },
+    deleteNote(index){
+      this.notes.splice(index, 1)
     }
-    
   }
 }
 </script>
+
+<style lang="scss">
+.no-notes{
+  text-align: center;
+  color: #999;
+}
+</style>
