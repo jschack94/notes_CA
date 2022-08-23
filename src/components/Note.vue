@@ -1,6 +1,6 @@
 <template>
     <div class="note-item">
-        <span class="note-title"></span>
+        <span class="note-title">{{note.title}}</span>
         <span class="note-nav">
            
         </span>
@@ -11,8 +11,8 @@
 
 
 export default {
-    props: ['id', 'note']
-    
+    props: ['id', 'note'],
+   
 }
 </script>
 

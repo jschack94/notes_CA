@@ -22,8 +22,31 @@ import AddNoteBtn from '@/components/AddNoteBtn.vue'
 import Note from '@/components/Note.vue'
 
 export default {
-  
-   
-  
+  components: {
+    AddNoteBtn,
+    Note
+  },
+  data: () => ({
+    notes: []
+  }),
+  watch: {
+    notes: {
+      handler() {
+        localStorage.setItem('notes', JSON.stringify(this.notes))
+      },
+      deep: true
+    }
+  },
+  created() {
+    if(localStorage.getItem('notes')) {
+      this.notes = JSON.parse(localStorage.getItem('notes'))
+    }
+  },
+  methods: {
+    saveNote(note) {
+      this.notes.push(note)
+    }
+    
+  }
 }
 </script>
